@@ -1,4 +1,4 @@
-'.source.ruby.rspec':
+'.source.ruby':
   'describe (String)':
     'prefix': 'des'
     'body': 'describe "${1:subject}" do\n  $0\nend'
@@ -74,9 +74,9 @@
   'feature':
     'prefix': 'sce'
     'body': 'scenario "${1:scenario description}" do\n  $0\nend'
-  'it (should do something)':
+  'it (does something)':
     'prefix': 'its'
-    'body': 'it "should ${1:do something}"${2: do\n  $0\nend}'
+    'body': 'it "does ${1:do something}"${2: do\n  $0\nend}'
   'let':
     'prefix': 'let'
     'body': 'let(:${1:instance}) { $0 }'
@@ -92,132 +92,12 @@
   'once':
     'prefix': 'on'
     'body': 'once'
-  'should be_success':
-    'prefix': 'shbs'
-    'body': 'response.should be_success\n$0'
-  'should_not be_success':
-    'prefix': 'shnbs'
-    'body': 'response.should_not be_success\n$0'
   'before':
     'prefix': 'bef'
     'body': 'before(${1::each}) do\n  $0\nend'
-  'should ==':
-    'prefix': 'sh='
-    'body': '${1:target}.should == ${2:value}\n$0'
-  'should =~':
-    'prefix': 'shm'
-    'body': '${1:target}.should =~ /${2:regexp}/\n$0'
-  'should eql':
-    'prefix': 'she'
-    'body': '${1:target}.should eql(${2:value})\n$0'
-  'should be':
-    'prefix': 'shb'
-    'body': '${1:target}.should be(${2:result})\n$0'
-  'should be_kind_of':
-    'prefix': 'shbko'
-    'body': '${1:target}.should be_a_kind_of(${2:klass})\n$0'
-  'should be_instance_of':
-    'prefix': 'shbio'
-    'body': '${1:target}.should be_instance_of(${2:klass})\n$0'
-  'should be_close':
-    'prefix': 'shbc'
-    'body': '${1:target}.should be_close(${2:result}, ${3:tolerance})\n$0'
-  'should be_redirect':
-    'prefix': 'shbr'
-    'body': 'response.should be_redirect\n$0'
-  'should equal':
-    'prefix': 'she'
-    'body': '${1:target}.should equal(${2:value})\n$0'
-  'should have':
-    'prefix': 'shh'
-    'body': '${1:target}.should have(${2:num}).${3:things}\n$0'
-  'should have_at_least':
-    'prefix': 'shhal'
-    'body': '${1:target}.should have_at_least(${2:num}).${3:things}\n$0'
-  'should have_at_most':
-    'prefix': 'shham'
-    'body': '${1:target}.should have_at_most(${2:num}).${3:things}\n$0'
-  'should have_records':
-    'prefix': 'shhr'
-    'body': '${1:target}.should have(${2:x}).records\n$0'
-  'should match':
-    'prefix': 'shm'
-    'body': '${1:target}.should match(/${2:regexp}/)\n$0'
-  'should_not ==':
-    'prefix': 'shn='
-    'body': '${1:target}.should_not == ${2:value}\n$0'
-  'should_not =~':
-    'prefix': 'shnm'
-    'body': '${1:target}.should_not =~ /${2:regexp}/\n$0'
-  'should_not eql':
-    'prefix': 'shne'
-    'body': '${1:target}.should_not eql(${2:value})\n$0'
-  'should_not be':
-    'prefix': 'shnb'
-    'body': '${1:target}.should_not be(${2:result})\n$0'
-  'should_not be_kind_of':
-    'prefix': 'shkof'
-    'body': '${1:target}.should_not be_a_kind_of(${2:klass})\n$0'
-  'should_not be_instance_of':
-    'prefix': 'shbio'
-    'body': '${1:target}.should_not be_instance_of(${2:klass})\n$0'
-  'should_not be_close':
-    'prefix': 'shnbc'
-    'body': '${1:target}.should_not be_close(${2:result}, ${3:tolerance})\n$0'
-  'should_not be_redirect':
-    'prefix': 'shnbr'
-    'body': 'response.should_not be_redirect\n$0'
-  'should_not equal':
-    'prefix': 'shne'
-    'body': '${1:target}.should_not equal(${2:value})\n$0'
-  'should_not match':
-    'prefix': 'shnm'
-    'body': '${1:target}.should_not match(/${2:regexp}/)\n$0'
-  'should_not predicate':
-    'prefix': 'shnp'
-    'body': '${1:target}.should_not ${2:be_${3:predicate}} $4\n$0'
-  'should_not raise_error':
-    'prefix': 'shnre'
-    'body': 'lambda { $1 }.should_not raise_error(${2:error})\n$0'
-  'should_not_receive':
-    'prefix': 'shnr'
-    'body': '${1:mock}.should_not_receive(:${2:message})$3\n$0\n'
-  'should_not respond_to':
-    'prefix': 'shnrt'
-    'body': '${1:target}.should_not respond_to(:${2:sym})\n$0'
-  'should_not satisfy':
-    'prefix': 'shns'
-    'body': '${1:target}.should_not satisfy { |obj| $2 }\n$0'
-  'should_not throw':
-    'prefix': 'shnt'
-    'body': 'lambda { $1 }.should_not throw_symbol(:${2:symbol})\n$0'
-  'should predicate':
-    'prefix': 'shp'
-    'body': '${1:target}.should ${2:be_${3:predicate}} $4\n$0'
-  'should raise_error':
-    'prefix': 'shre'
-    'body': 'lambda { $1 }.should raise_error(${2:error})\n$0'
-  'should_receive':
-    'prefix': 'shr'
-    'body': '${1:mock}.should_receive(:${2:message})$3'
   'with args':
     'prefix': 'wia'
     'body': 'with(${1})$2'
-  'should redirect_to':
-    'prefix': 'shrt'
-    'body': 'response.should redirect_to(${1:url})\n$0'
-  'should render_template':
-    'prefix': 'shrt'
-    'body': 'response.should render_template(:${1:template})\n$0'
-  'should respond_to':
-    'prefix': 'shrt'
-    'body': '${1:target}.should respond_to(:${2:sym})\n$0'
-  'should satisfy':
-    'prefix': 'shs'
-    'body': '${1:target}.should satisfy { |obj| $2 }\n$0'
-  'should throw':
-    'prefix': 'sht'
-    'body': 'lambda { $1 }.should throw_symbol(:${2:symbol})\n$0'
   'specify':
     'prefix': 'spec'
     'body': 'specify { ${1:behavior} }'
