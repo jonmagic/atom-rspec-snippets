@@ -113,3 +113,9 @@
   'twice':
     'prefix': 'tw'
     'body': 'twice'
+  'let(:var)':
+    'prefix': 'let'
+    'body': 'let(:${1:var}) { $0 }'
+  'let!(:var)':
+    'prefix': 'let!'
+    'body': 'let!(:${1:var}) { $0 }'
