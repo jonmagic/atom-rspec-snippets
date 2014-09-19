@@ -1,4 +1,4 @@
-'.source.ruby, .source.rspec':
+'.source.ruby, .source.ruby.rspec':
   'describe (String)':
     'prefix': 'des'
     'body': 'describe \'${1:subject}\' do\n  $0\nend'
