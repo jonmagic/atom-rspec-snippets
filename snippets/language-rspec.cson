@@ -74,9 +74,6 @@
   'feature':
     'prefix': 'sce'
     'body': 'scenario \'${1:scenario description}\' do\n  $0\nend'
-  'it (does something)':
-    'prefix': 'its'
-    'body': 'it \'does ${1:do something}\'${2: do\n  $0\nend}'
   'let':
     'prefix': 'let'
     'body': 'let(:${1:instance}) { $0 }'
